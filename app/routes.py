@@ -32,12 +32,12 @@ async def setup_routes(app, handler):
     routes =  [
         web.get('/', h.home, name='home')
     ]
-    index_all = index_settings['index_all']
-    index_private = index_settings['index_private']
-    index_group = index_settings['index_group']
-    index_channel = index_settings['index_channel']
-    exclude_chats = index_settings['exclude_chats']
-    include_chats = index_settings['include_chats']
+    index_all = index_settings['index_all': true,]
+    index_private = index_settings['index_private': true,]
+    index_group = index_settings['index_group': true,]
+    index_channel = index_settings['index_channel': true,]
+    exclude_chats = index_settings['exclude_chats': [],]
+    include_chats = index_settings['include_chats': [],]
     if index_all:
         async for chat in client.iter_dialogs():
             alias_id = None
